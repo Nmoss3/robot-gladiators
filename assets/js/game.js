@@ -160,23 +160,7 @@ var shop = function() {
 
   // use switch case to carry out action
   switch (shopOptionPrompt) {
-    case 'refill':
-    case 'REFILL':
-      playerInfo.refillHealth();
-      break;
-    case 'upgrade':
-    case 'UPGRADE':
-      playerInfo.upgradeAttack();
-      break;
-    case 'leave':
-    case 'LEAVE':
-      window.alert('Leaving the store.');
-      break;
-    default:
-      window.alert('You did not pick a valid option. Try again.');
-      shop();
-      break;
-  }
+  
 };
 
 //function to set name
