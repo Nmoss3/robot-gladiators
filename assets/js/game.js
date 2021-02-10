@@ -82,7 +82,7 @@ var fightOrSkip = function() {
     }
   }
 } 
-
+var is playerTurn = true;
 var fight = function(enemy) {
   while (playerInfo.health > 0 && enemy.health > 0) {
     if (fightOrSkip()) {
@@ -160,7 +160,17 @@ var shop = function() {
 
   // use switch case to carry out action
   switch (shopOptionPrompt) {
-  
+    case 1:
+      playerInfo.refillHealth();
+      break;
+    case 2:
+      playerInfo.upgradeAttack();
+      break;
+    case 3: 
+    window.alert("You did not pick a valid option. Try again.");
+    shop();
+    break;
+  }
 };
 
 //function to set name
